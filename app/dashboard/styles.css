@@ -1,0 +1,39 @@
+/* style.css */
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1);
+    /* Adjust scale factor as needed */
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+    /* Show overlay on hover */
+}
+
+.overlay-text {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
